@@ -76,3 +76,23 @@ npm install
 npm run dev 
 ## 📄 License
 This project is licensed under the MIT License.
+
+
+## 🌱 Learning Resources
+
+New to open source? Check these out:
+- [First Contributions](https://firstcontributions.github.io/)
+- [How to Contribute to Open Source](https://opensource.guide/how-to-contribute/)
+- [GitHub Flow Guide](https://guides.github.com/introduction/flow/)
+
+
+## 📞 Contact
+
+- **Maintainer**: [@Vaishnavi-Manne](https://github.com/Vaishnavi-Manne)
+- **Issues**: [GitHub Issues](https://github.com/Vaishnavi-Manne/LetsDoDsaTogether/issues)
+
+---
+
+**Happy Contributing! 🎉**
+
+*This project is part of learning open-source contribution. Every contribution, no matter how small, is valued and appreciated!*
