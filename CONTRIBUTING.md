@@ -24,7 +24,7 @@ Once you have forked your repository, go to your profile inside the repository s
 Once you locate your repository, you must clone it to your local machine.
 
 ```sh
-git clone https://github.com/YOUR-USERNAME/bodhika.git
+git clone https://github.com/YOUR-USERNAME/LetsDoDsaTogether.git
 ```
 
 Congratulations! You have successfully cloned the repository to your local machine. You can now make changes, add new features, or fix issues in the codebase.
@@ -36,16 +36,16 @@ cd LetsDoDsaTogether
 
 ### Step 4: Install all the dependencies
 ```sh
-yarn
+npm install
 ```
 
 ### Step 5: Start the application
 
 ```sh
-yarn dev
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:5173](http://localhost:5173) with your browser to see the result.
 
 ### Step 5: Create a New Branch (important)
 
