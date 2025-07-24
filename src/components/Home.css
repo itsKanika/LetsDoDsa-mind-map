@@ -90,3 +90,23 @@
   color: #475569;
   font-size: 0.9rem;
 }
+
+.how-it-works {
+  text-align: center;
+  margin: 40px auto;
+  padding: 20px;
+  max-width: 800px;
+  background: #f0f4ff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.how-it-works h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.how-it-works p {
+  font-size: 1.1rem;
+  color: #444;
+}
