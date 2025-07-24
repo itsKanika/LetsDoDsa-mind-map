@@ -1,0 +1,161 @@
+/* --- Contact Page Dark Mode --- */
+body.dark .contact-page {
+  background: #23232a !important;
+}
+body.dark .contact-section,
+body.dark .faq-section {
+  background: #18181b !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.45) !important;
+}
+body.dark .contact-header h1,
+body.dark .contact-intro h2,
+body.dark .faq-intro h2 {
+  color: #f3f4f6 !important;
+}
+body.dark .contact-intro p,
+body.dark .faq-intro p {
+  color: #a1a1aa !important;
+}
+body.dark .tab-btn {
+  background: #23232a !important;
+  color: #a1a1aa !important;
+  border: 1px solid #444 !important;
+}
+body.dark .tab-btn.active {
+  background: #6366f1 !important;
+  color: #fff !important;
+}
+body.dark .tab-btn:hover:not(.active) {
+  background: #18181b !important;
+}
+body.dark .form-group label {
+  color: #f3f4f6 !important;
+}
+body.dark .form-group input,
+body.dark .form-group textarea {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  border-color: #444 !important;
+}
+body.dark .form-group input:focus,
+body.dark .form-group textarea:focus {
+  border-color: #6366f1 !important;
+}
+body.dark .submit-btn {
+  background: #6366f1 !important;
+  color: #fff !important;
+}
+body.dark .submit-btn:hover {
+  background: #4f46e5 !important;
+}
+body.dark .faq-item {
+  border-color: #444 !important;
+}
+body.dark .faq-question {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+}
+body.dark .faq-question.active {
+  background: #18181b !important;
+  color: #6366f1 !important;
+}
+body.dark .faq-answer {
+  background: #18181b !important;
+  color: #d1d5db !important;
+  border-top: 1px solid #444 !important;
+}
+/* Global dark mode overrides. Only active when body has .dark */
+body.dark {
+  background: #18181b !important;
+  color: #f3f4f6 !important;
+}
+body.dark .min-h-screen {
+  background: #18181b !important;
+}
+body.dark input,
+body.dark textarea,
+body.dark select {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  border-color: #444 !important;
+}
+body.dark a {
+  color: #90cdf4;
+}
+body.dark .bg-slate-100 {
+  background: #23232a !important;
+}
+body.dark .text-black {
+  color: #f3f4f6 !important;
+}
+body.dark .text-gray-700 {
+  color: #d1d5db !important;
+}
+body.dark .border-gray-300 {
+  border-color: #444 !important;
+}
+/* Add more overrides as needed for your components */
+
+/* --- Auth Page Dark Mode --- */
+body.dark .auth-container {
+  background: #18181b !important;
+}
+body.dark .auth-right {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+}
+body.dark .auth-form-container {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.45) !important;
+}
+body.dark .auth-header h2,
+body.dark .auth-header p,
+body.dark .auth-form label {
+  color: #f3f4f6 !important;
+}
+body.dark .auth-form input {
+  background: #18181b !important;
+  color: #f3f4f6 !important;
+  border-color: #444 !important;
+}
+body.dark .auth-form input:focus {
+  border-color: #6366f1 !important;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15) !important;
+}
+body.dark .auth-form input:disabled {
+  background: #23232a !important;
+  color: #a1a1aa !important;
+}
+body.dark .toggle-password {
+  color: #a1a1aa !important;
+}
+body.dark .toggle-password:hover {
+  color: #f3f4f6 !important;
+}
+body.dark .social-btn {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  border: 1px solid #444 !important;
+}
+body.dark .social-btn:hover {
+  background: #18181b !important;
+}
+body.dark .divider {
+  border-color: #444 !important;
+}
+body.dark .form-options a,
+body.dark .auth-form a {
+  color: #90cdf4 !important;
+}
+body.dark .submit-btn {
+  background: #6366f1 !important;
+  color: #fff !important;
+}
+body.dark .submit-btn:hover {
+  background: #4f46e5 !important;
+}
+body.dark .error-message {
+  color: #f87171 !important;
+}
