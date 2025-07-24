@@ -1,47 +1,41 @@
-
-import CompartmentButton from './CompartmentButton';
 import './Home.css';
 
-const Home = ({ setView }) => (
+const Home = ({ setView }) => {
+  return (
+    <div className="home-container">
+      <header className="home-header">
+        <h1 className="main-heading">Let's Do DSA Together 🚀</h1>
+        <p className="sub-heading">
+          Your one-stop guide to mastering Data Structures & Algorithms. From basics to advanced, all in one place.
+        </p>
+      </header>
 
-  <div className='containerBgImg'><div className=" h-screen w-screen  rounded-xl bg-white shadow-md p-10 text-center space-y-6 "id ="home-container"> 
-  <div className="navbar fixed top-0 left-0 w-full z-50 bg-white shadow-md">
-  <div><h1>HOME</h1></div>
-  <div><button> Beginner</button></div>
-  <div><button> Advance</button></div>
-  </div>
-  <div className="herosection">
-   <div className='headText'> <h1 className="text-2xl font-bold tracking-tight">LET'S DO DSA TOGETHER</h1></div>
-    <div><img src='public\images\heroSecImg.jpg' alt="" srcset="" /></div>
+      <section className="cards-section">
+        <div className="card beginner">
+          <h2>Beginner</h2>
+          <p>Start your DSA journey with handpicked beginner-level problems and concepts explained simply.</p>
+          <button onClick={() => setView('beginner')}>Explore Beginner</button>
+        </div>
+
+        <div className="card advanced">
+          <h2>Advanced</h2>
+          <p>Take your skills up a notch. Dive into complex patterns, DP, graphs, and real interview problems.</p>
+          <button onClick={() => setView('advanced')}>Explore Advanced</button>
+        </div>
+
+        <div className="card both">
+          <h2>All-in-One</h2>
+          <p>Don't want to choose? Explore everything from beginner to advanced in a guided roadmap format.</p>
+          <button onClick={() => setView('beginner')}>Start Full Journey</button>
+        </div>
+      </section>
+
+      <footer className="home-footer">
+        <p>Made with ❤️ for aspiring developers</p>
+        <p>© 2025 Let's Do DSA</p>
+      </footer>
     </div>
-  <div className="description">
-  <span>DSA🧠🐦‍🔥</span>
-    <p className="text-sm text-slate-600"> Mastering DSA is like unlocking cheat codes for problem-solving. It's the core of writing clean, efficient, and optimized code—stuff that actually performs under pressure. Whether you're trying to ace coding interviews or build scalable systems, DSA is the ultimate skill flex.</p>
-  </div>
-
-  <div className="sections">
-    <div className="grid grid-rows-3 gap-4 mt-4" id="buttons">
-    <CompartmentButton label="Beginner's" onClick={() => setView('beginner')} />
-    <CompartmentButton label="Advance" onClick={() => setView('advanced')} />
-    <CompartmentButton label="Both" onClick={() => setView('beginner')} />
-    </div>
-  </div>
-  
-  <footer className="  bg-gray-900 text-white text-center p-6 mt-10">
-<h2 className="text-lg font-semibold mb-2">Let's Do DSA 🚀</h2>
-<p className="text-sm mb-2">Your one-stop guide to mastering Data Structures and Algorithms.</p>
-
-<div className="flex justify-center gap-6 mb-2">
-  <a href="#home" className="hover:underline">Home</a>
-  <a href="#about" className="hover:underline">About</a>
-  <a href="#contact" className="hover:underline">Contact</a>
-  <a href="https://github.com" target="_blank" rel="noreferrer" className="hover:underline">GitHub</a>
-</div>
-
-<p className="text-xs text-gray-400">© 2025 Let's Do DSA. All rights reserved.</p>
-</footer>
-
-</div></div>
-);
+  );
+};
 
 export default Home;
