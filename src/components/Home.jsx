@@ -1,9 +1,11 @@
 import './Home.css';
+import Header from './Header';
 
 const Home = ({ setView }) => {
   return (
     <div className="home-container">
       {/* ───────── Hero ───────── */}
+       <Header />
       <header className="home-header">
         <h1 className="main-heading">Let&apos;s Do DSA Together 🚀</h1>
         <p className="sub-heading">
