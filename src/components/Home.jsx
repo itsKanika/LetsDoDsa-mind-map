@@ -1,3 +1,4 @@
+
 import './Home.css';
 
 const Home = ({ setView }) => {
@@ -43,5 +44,6 @@ const Home = ({ setView }) => {
     </div>
   );
 };
+
 
 export default Home;
