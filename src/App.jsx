@@ -4,7 +4,7 @@ import Panel from './components/Panel';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ContactPage from './components/ContactPage'; // Add this import
-
+import Header from './components/Header';
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [view, setView] = useState('home');
@@ -31,12 +31,21 @@ const App = () => {
 
   // Once logged in, show the main application
   return (
+    <>
+   {view !== 'home' && (
+      <div className="navbar-wrapper">
+        <Header setView={setView} />
+      </div>
+    )}
     <div className="min-h-screen w-screen flex items-center justify-center bg-slate-100">
       {view === 'home' && <Home setView={setView} />}
       {view === 'beginner' && <Panel setView={setView} tier="Beginner" />}
       {view === 'advanced' && <Panel setView={setView} tier="Advanced" />}
       {view === 'contact' && <ContactPage setView={setView} />}
     </div>
+  </>
+
+
   );
 };
 
