@@ -1,4 +1,7 @@
-
+/* Set default font for the panel */
+.panel-container {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+}
 
 .heading{
     background-color: rgba(75, 207, 244, 0.256);
