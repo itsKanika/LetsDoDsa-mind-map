@@ -102,9 +102,13 @@ const Panel = ({ tier, setView }) => (
    
     <button className=" border px-4 py-2 "  >Online + Social Media Resources</button>
    </div>
-    <button onClick={() => setView('home')} className=" mt-6 text-sm text-blue-600 underline border-4 ">
-      ← Back
-    </button>
+    <footer className="footer">
+  <button onClick={() => setView('home')} className="back-button">
+    ← Back
+  </button>
+  <p className="footer-text">Made with ❤️ for aspiring developers</p>
+</footer>
+
    
   </div>
 );
