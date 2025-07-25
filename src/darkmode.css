@@ -70,30 +70,64 @@ body.dark {
   background: #18181b !important;
   color: #f3f4f6 !important;
 }
-body.dark .min-h-screen {
+/* Removed homepage-related dark mode styles. Other page styles untouched. */
+/* --- Homepage Dark Mode --- */
+body.dark .home-header,
+body.dark .main-heading {
+  color: #e0e7ff !important;
+}
+body.dark .sub-heading {
+  color: #a1a1aa !important;
+}
+body.dark .how-it-works {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 4px 32px 0 rgba(0, 0, 0, 0.45) !important;
+}
+body.dark .cards-section {
+  background: transparent !important;
+}
+body.dark .card {
+  background: #23232a !important;
+  color: #f3f4f6 !important;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25) !important;
+}
+body.dark .card h2 {
+  color: #90cdf4 !important;
+}
+body.dark .card p {
+  color: #a1a1aa !important;
+}
+body.dark .card button {
+  background-color: #6366f1 !important;
+  color: #fff !important;
+}
+body.dark .card button:hover {
+  background-color: #4f46e5 !important;
+}
+body.dark .site-footer {
+  background: linear-gradient(135deg, #23232a 0%, #18181b 100%) !important;
+  color: #f3f4f6 !important;
+}
+body.dark .footer-links button {
+  color: #f3f4f6 !important;
+}
+body.dark .footer-links button:hover {
+  color: #90cdf4 !important;
+}
+body.dark .footer-copy {
+  color: #a1a1aa !important;
+}
+body.dark .social-links a {
+  background: #23232a !important;
+  color: #90cdf4 !important;
+}
+body.dark .social-links a:hover {
   background: #18181b !important;
+  color: #fff !important;
 }
-body.dark input,
-body.dark textarea,
-body.dark select {
-  background: #23232a !important;
-  color: #f3f4f6 !important;
-  border-color: #444 !important;
-}
-body.dark a {
-  color: #90cdf4;
-}
-body.dark .bg-slate-100 {
-  background: #23232a !important;
-}
-body.dark .text-black {
-  color: #f3f4f6 !important;
-}
-body.dark .text-gray-700 {
-  color: #d1d5db !important;
-}
-body.dark .border-gray-300 {
-  border-color: #444 !important;
+body.dark .home-container {
+  background: linear-gradient(to bottom, #18181b, #23232a, #18181b) !important;
 }
 /* Add more overrides as needed for your components */
 
