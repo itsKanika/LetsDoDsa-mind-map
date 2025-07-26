@@ -21,6 +21,9 @@
   background: var(--toggle-hover-bg, #eee);
 }
 
+.theme-toggle-btn:hover {
+  background: var(--toggle-hover-bg, #eee);
+}
 body.dark .theme-toggle-btn {
   --toggle-bg: #222;
   --toggle-color: #ffd700;
