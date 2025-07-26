@@ -6,6 +6,7 @@ import Login from './components/Login';
 import Signup from './components/Signup';
 import ContactPage from './components/ContactPage';
 import Header from './components/Header';
+import ThemeToggle from './components/ThemeToggle';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
