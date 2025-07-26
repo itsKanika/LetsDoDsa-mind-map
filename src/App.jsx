@@ -5,6 +5,7 @@ import Panel from './components/Panel';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ContactPage from './components/ContactPage';
+import Header from './components/Header';  
 import ThemeToggle from './components/ThemeToggle';
 
 const App = () => {
@@ -18,12 +19,12 @@ const App = () => {
       <div className="auth-app">
         <ThemeToggle />
         {authMode === 'login' ? (
-          <Login 
+          <Login
             setIsLoggedIn={setIsLoggedIn}
             switchToSignup={() => setAuthMode('signup')}
           />
         ) : (
-          <Signup 
+          <Signup
             setIsLoggedIn={setIsLoggedIn}
             switchToLogin={() => setAuthMode('login')}
           />
@@ -35,6 +36,11 @@ const App = () => {
   // Once logged in, show the main application
   return (
     <>
+      {view !== 'home' && (
+        <div className="navbar-wrapper">
+          <Header setView={setView} />
+        </div>
+      )}
       <ThemeToggle />
       <div className="min-h-screen w-screen flex items-center justify-center bg-slate-100">
         {view === 'home' && <Home setView={setView} />}

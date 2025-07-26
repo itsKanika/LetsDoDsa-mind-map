@@ -16,6 +16,11 @@
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
+
+.theme-toggle-btn:hover {
+  background: var(--toggle-hover-bg, #eee);
+}
+
 .theme-toggle-btn:hover {
   background: var(--toggle-hover-bg, #eee);
 }
