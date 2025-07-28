@@ -4,8 +4,10 @@ import { Eye, EyeOff, Mail, Lock, Github, ArrowRight, Code2, Trophy, Users } fro
 import { FcGoogle } from 'react-icons/fc';
 import './Auth.css';
 import logo from '../assets/logo.png';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Login = ({ setIsLoggedIn, switchToSignup }) => {
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     email: '',
     password: ''
@@ -57,7 +59,8 @@ const Login = ({ setIsLoggedIn, switchToSignup }) => {
 
     // Simulate API call - replace with your actual authentication logic
     setTimeout(() => {
-      setIsLoggedIn(true); // This will trigger the main app to show
+      // setIsLoggedIn(true); // This will trigger the main app to show
+      navigate('/');
       setIsLoading(false);
     }, 1500);
   };
@@ -66,13 +69,14 @@ const Login = ({ setIsLoggedIn, switchToSignup }) => {
     setIsLoading(true);
     // Simulate social login - replace with actual implementation
     setTimeout(() => {
-      setIsLoggedIn(true); // This will trigger the main app to show
+      // setIsLoggedIn(true); // This will trigger the main app to show
+      navigate('/');
       setIsLoading(false);
     }, 2000);
   };
 
   return (
-    <div className="auth-container">
+    <div className="auth-container pt-20">
       {/* Left Side - Branding */}
       <div className="auth-left">
         <div className="brand-content">
@@ -242,10 +246,12 @@ const Login = ({ setIsLoggedIn, switchToSignup }) => {
               Don't have an account?{' '}
               <button
                 className="switch-auth"
-                onClick={switchToSignup}
+                // onClick={switchToSignup}
                 disabled={isLoading}
               >
-                Sign up
+                <Link to="/auth/signup">
+                  Sign Up
+                </Link>
               </button>
             </p>
           </div>
