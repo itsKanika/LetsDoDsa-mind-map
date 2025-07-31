@@ -1,4 +1,5 @@
 import React from "react";
+import {useParams} from 'react-router-dom'
 import {
   VerticalTimeline,
   VerticalTimelineElement,
@@ -17,7 +18,8 @@ import SyncAltIcon from '@mui/icons-material/SyncAlt';
 import MemoryIcon from '@mui/icons-material/Memory';
 import StorageIcon from '@mui/icons-material/Storage';
 
-const Roadmap = ({ setView }) => {
+const Roadmap = () => {
+  const {level, roadmap} = useParams()
   const timePeriod = [
       {
         heading: "Mathematics for Programming",
@@ -146,12 +148,12 @@ const Roadmap = ({ setView }) => {
       </VerticalTimeline>
 
       <div className="text-center mt-10">
-        <button
-          onClick={() => setView("home")}
+        <a
+          href='/'
           className="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition"
         >
           Back to Home
-        </button>
+        </a>
       </div>
     </div>
   );
