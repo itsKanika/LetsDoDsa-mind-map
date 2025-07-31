@@ -96,7 +96,9 @@ const Panel = ({ tier, setView }) => (
     </div>
 
    <div className="section3  ">
-   <button className=" border px-4 py-2 ">Roadmap</button>
+   <button
+   onClick={() => setView('roadmap')} 
+   className=" border px-4 py-2 ">Roadmap</button>
    
     <button className=" border px-4 py-2 "id='B2'>Discord Channels</button>
    

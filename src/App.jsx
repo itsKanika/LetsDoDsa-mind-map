@@ -4,6 +4,7 @@ import Panel from './components/Panel';
 import Login from './components/Login';
 import Signup from './components/Signup';
 import ContactPage from './components/ContactPage'; // Add this import
+import Roadmap from './components/Roadmap';
 
 const App = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,11 +32,12 @@ const App = () => {
 
   // Once logged in, show the main application
   return (
-    <div className="min-h-screen w-screen flex items-center justify-center bg-slate-100">
+    <div className="flex items-center justify-center bg-slate-100">
       {view === 'home' && <Home setView={setView} />}
       {view === 'beginner' && <Panel setView={setView} tier="Beginner" />}
       {view === 'advanced' && <Panel setView={setView} tier="Advanced" />}
       {view === 'contact' && <ContactPage setView={setView} />}
+      {view === 'roadmap' && <Roadmap setView={setView} />}
     </div>
   );
 };
