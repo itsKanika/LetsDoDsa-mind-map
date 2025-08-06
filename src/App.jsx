@@ -9,6 +9,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import AuthPage from './pages/AuthPage';
 import MainLayout from './components/MainLayout';
 import HomePage from './pages/HomePage';
+import { AlgorithmVisualizer } from './components/AlgorithmVisualizer';
 
 const App = () => {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -58,6 +59,10 @@ const App = () => {
       {
         path: "contact",
         element: <ContactPage/>,
+      },
+      {
+        path: "visualizer",
+        element: <AlgorithmVisualizer/>,
       },
       {
         path: ":level",
