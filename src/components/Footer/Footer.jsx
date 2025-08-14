@@ -1,9 +1,10 @@
 import "../Home.css";
+import { Link } from "react-router-dom";
 import { CgDetailsMore } from "react-icons/cg";
 const Footer = () => {
   return (
     <div>
-      <footer className="site-footer relative transition-all duration-300 bg-gradient-to-r dark:from-slate-800 dark:to-indigo-900 from-blue-500 to-cyan-400">
+      <footer className="site-footer">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-20" />
 
@@ -62,16 +63,16 @@ const Footer = () => {
                     { name: "Advanced", path: "/Advance", icon : <i className="fas fa-rocket" /> },
                     { name: "Contact", path: "/contact", icon : <i className="fas fa-envelope" /> },
                   ].map((link) => (
-                    <a
+                    <Link
                       key={link.name}
-                      href={link.path}
+                      to={link.path}
                       className="hover:text-blue-300 transition-all duration-300 text-sm flex items-center group"
                     >
                       <span className="w-4 flex justify-center">
                         <span className="w-2 h-2 bg-blue-700 rounded-full group-hover:scale-150 transition-transform"></span>
                       </span>
                       <span className="ml-3">{link.icon} {link.name}</span>
-                    </a>
+                    </Link>
                   ))}
                 </nav>
               </div>
