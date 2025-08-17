@@ -62,7 +62,7 @@ const Footer = () => {
                       <span className="sr-only">Twitter (opens in new tab)</span>
                     </a>
                     <a
-                      href="https://discord.com/channels/@me"
+                      href="https://discord.com/invite/qsebhZeV"
                       aria-label="Discord"
                       target="_blank"
                       rel="noopener noreferrer"
