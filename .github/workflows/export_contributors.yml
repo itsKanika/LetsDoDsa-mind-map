@@ -1,14 +1,13 @@
 name: Export Contributors
 
 on:
-  workflow_dispatch:   # run manually
+  workflow_dispatch:  # run manually from Actions tab
   schedule:
-    - cron: "0 0 * * 0"   # weekly run (every Sunday midnight UTC)
+    - cron: "0 0 * * 0"   # optional: weekly (Sundays 00:00 UTC)
 
 jobs:
   export:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -16,19 +15,23 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.x"
+          python-version: "3.11"
 
-      - name: Install dependencies
-        run: pip install requests openpyxl
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests gspread oauth2client
 
-      - name: Run export script
+      - name: Write Google service account key
+        run: echo '${{ secrets.GCP_SERVICE_ACCOUNT }}' > service_account.json
+
+      - name: Run export
         env:
+          # GitHub token for API (built-in)
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Config for the script (optional: change here instead of hardcoding)
           REPO: Vaishnavi-Manne/LetsDoDsaTogether
-        run: python .github/export_contributors.py
-
-      - name: Upload Excel as artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: contributors-excel
-          path: contributors.xlsx
+          SPREADSHEET_ID: 1icNvrmtp0eeJn5RIt2f8u8fcD_eRsRFpvhLIxBk3WEs
+          EMAIL_TAB_NAME: Emails
+          OUTPUT_TAB_NAME: Contributors
+        run: python scripts/export_contributors.py
