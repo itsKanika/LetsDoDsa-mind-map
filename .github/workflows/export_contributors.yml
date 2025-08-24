@@ -25,7 +25,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: Vaishnavi-Manne/LetsDoDsaTogether
-        run: python .github/scripts/export_contributors.py
+        run: python .github/export_contributors.py
 
       - name: Upload Excel as artifact
         uses: actions/upload-artifact@v4
