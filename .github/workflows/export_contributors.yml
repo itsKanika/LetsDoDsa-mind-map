@@ -1,0 +1,34 @@
+name: Export Contributors
+
+on:
+  workflow_dispatch:   # run manually
+  schedule:
+    - cron: "0 0 * * 0"   # weekly run (every Sunday midnight UTC)
+
+jobs:
+  export:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: pip install requests openpyxl
+
+      - name: Run export script
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: Vaishnavi-Manne/LetsDoDsaTogether
+        run: python .github/scripts/export_contributors.py
+
+      - name: Upload Excel as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: contributors-excel
+          path: contributors.xlsx
