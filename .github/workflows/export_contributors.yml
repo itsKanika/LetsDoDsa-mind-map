@@ -34,4 +34,4 @@ jobs:
           SPREADSHEET_ID: 1icNvrmtp0eeJn5RIt2f8u8fcD_eRsRFpvhLIxBk3WEs
           EMAIL_TAB_NAME: Emails
           OUTPUT_TAB_NAME: Contributors
-        run: python scripts/export_contributors.py
+        run: python export_contributors.py
